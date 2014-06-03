@@ -37,6 +37,8 @@
             }
         };
 
+$(document).ready(function(e) {
+
         function audioIsReady() {
             setTimeout(function () {
                 $('#buttons').fadeIn();
@@ -49,17 +51,15 @@
         }
 
         $(document).on("initAudio", function () {
+			alert ("init");
             $.mbAudio.pause('effectSprite', audioIsReady);
            $("#loading").show();
         });
 
 
-$(document).ready(function(e) {
-	alert ("iniciando");
-	
-	alert ("ready");
 
-$('#strat').tap(function(){
+	$('#strat').tap(function(){
+		alert ("iniciar");
 	$(document).trigger('initAudio');
 });
 
