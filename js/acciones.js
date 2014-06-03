@@ -41,12 +41,9 @@ $(document).ready(function(e) {
 
         function audioIsReady() {
             setTimeout(function () {
-                $('#buttons').fadeIn();
+//                $('#buttons').fadeIn();
                 $("#loading").hide();
-
-                if(isStandAlone || !isDevice)
-                    $.mbAudio.play('backgroundSprite', 'levelIntro');
-
+               
             }, 3000);
         }
 
